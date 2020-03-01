@@ -1,0 +1,135 @@
+/* Generic ********************************************************************/
+.frankenpaxos-node {
+  border: 1pt solid black;
+  padding-left: 12pt;
+  padding-right: 12pt;
+  margin-bottom: 12pt;
+}
+
+.frankenpaxos-box {
+  margin-bottom: 12pt;
+}
+
+.frankenpaxos-box-title {
+  margin-bottom: 6pt;
+  margin-left: 0pt;
+  margin-right: 0pt;
+  margin-top: 0pt;
+}
+
+.frankenpaxos-hr {
+  background: #bdc3c7;
+  border: 0pt;
+  height: 1px;
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  width: 95%;
+}
+
+.frankenpaxos-button {}
+
+/* Logs ***********************************************************************/
+.frankenpaxos-log {
+  border: 1pt solid black;
+  font-family: monospace;
+  font-size: smaller;
+  height: 150px;
+  overflow: scroll; /* Enable vertical scrolling. */
+  padding: 2pt;
+  white-space: nowrap; /* Enable horizontal scrolling. */
+}
+.frankenpaxos-log-entry {}
+.frankenpaxos-log-FATAL { background: black; color: white; }
+.frankenpaxos-log-ERROR { color: #c0392b; }
+.frankenpaxos-log-WARN { color: #e67e22; }
+.frankenpaxos-log-INFO { color: #27ae60; }
+.frankenpaxos-log-DEBUG { color: #2c3e50; }
+
+/* Messages *******************************************************************/
+.frankenpaxos-messages {}
+.frankenpaxos-messages-message {
+  border: 1pt solid black;
+  margin-bottom: 4pt;
+  padding: 4pt;
+}
+.frankenpaxos-messages-deliver {}
+.frankenpaxos-messages-drop {}
+.frankenpaxos-messages-duplicate {}
+.frankenpaxos-messages-src {}
+.frankenpaxos-messages-dst {}
+.frankenpaxos-messages-text {}
+
+/* Timers *********************************************************************/
+.timer-bar-outer {
+  height: 10pt;
+  border: 1pt solid black;
+  display: inline-block;
+}
+
+.timer-bar-inner {
+  height: 10pt;
+  background: #3498db;
+}
+
+/* Objects ********************************************************************/
+.fp-object {
+  border-collapse: collapse;
+}
+
+.fp-field-key {
+  color: #8e44ad; /* purple */
+  text-align: right;
+  padding-right: 4pt;
+}
+
+.fp-field-key::after {
+  content: ": ";
+  color: black;
+}
+
+.fp-field-value {
+  border: 1pt solid black;
+  padding: 4pt;
+}
+
+/* Maps ***********************************************************************/
+.frankenpaxos-map {
+  border-collapse: collapse;
+}
+
+.frankenpaxos-map-key {
+  border: 1pt solid black;
+  padding: 4pt;
+}
+
+.frankenpaxos-map-value {
+  border: 1pt solid black;
+  padding: 4pt;
+}
+
+/* Seqs ***********************************************************************/
+.frankenpaxos-seq {
+  border-collapse: collapse;
+}
+
+.frankenpaxos-seq-data {
+  border: 1pt solid black;
+  padding: 4pt;
+}
+
+.frankenpaxos-seq-index {
+  border: none;
+  text-align: center;
+  color: gray;
+}
+
+/* Unit test ******************************************************************/
+.frankenpaxos-unittest {
+  border: 1pt solid black;
+  font-family: monospace;
+  font-size: smaller;
+  height: 150px;
+  overflow: scroll; /* Enable vertical scrolling. */
+  padding: 2pt;
+  white-space: nowrap; /* Enable horizontal scrolling. */
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vue Test</title>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <link href="../frankenpaxos.css" rel="stylesheet">
+  <style type="text/css">
+    html {
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+
+    #container {
+      font-size: 18px;
+      background: #FEFEFE;
+      padding-left: 1em;
+      padding-right: 1em;
+      max-width: 44em;
+      line-height: 27px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .app {
+      margin-top: 16pt;
+      margin-bottom: 16pt;
+    }
+
+    .object {
+      margin-bottom: 16pt;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="tweened_app">
+      <h1>VueTest</h1>
+
+      <object-and-methods  v-bind="mutableStrings" v-slot="{object: o}">
+        <frankenpaxos-seq :seq="o"></frankenpaxos-seq>
+      </object-and-methods>
+      <object-and-methods  v-bind="mutableString" v-slot="{object: o}">
+        <frankenpaxos-map :map="o"></frankenpaxos-map>
+      </object-and-methods>
+      <object-and-methods  v-bind="mutableCell" v-slot="{object: o}">
+        <frankenpaxos-map :map="o"></frankenpaxos-map>
+      </object-and-methods>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/AttrPlugin.min.js"></script>
+  <script type="text/javascript" src="../../../../target/scala-2.12/frankenpaxos-fastopt.js"></script>
+  <script type="text/javascript" src="../frankenpaxos.js"></script>
+  <script type="text/javascript" src="../vue_test/vue_test.js"></script>
+</body>
+</html>

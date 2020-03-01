@@ -1,0 +1,20 @@
+{
+  "1": {
+    "clients": ["localhost"],
+    "leaders": ["localhost"],
+    "matchmakers": ["localhost"],
+    "reconfigurers": ["localhost"],
+    "acceptors": ["localhost"],
+    "replicas": ["localhost"],
+    "driver": ["localhost"]
+  },
+  "2": {
+    "clients": ["localhost"],
+    "leaders": ["localhost"],
+    "matchmakers": ["localhost"],
+    "reconfigurers": ["localhost"],
+    "acceptors": ["localhost"],
+    "replicas": ["localhost"],
+    "driver": ["localhost"]
+  }
+}

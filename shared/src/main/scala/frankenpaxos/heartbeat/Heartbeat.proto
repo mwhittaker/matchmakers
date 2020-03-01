@@ -1,0 +1,33 @@
+syntax = "proto2";
+
+package frankenpaxos.heartbeat;
+
+import "scalapb/scalapb.proto";
+
+option (scalapb.options) = {
+  package_name: "frankenpaxos.heartbeat"
+  flat_package: true
+};
+
+message Ping {
+  // Every heartbeat participant monitors a sequence of addresses. `index` is
+  // the index into this sequence. For example, if a participant is monitoring
+  // addresses [localhost:100, localhost:200, localhost:300] and sends a ping
+  // to address localhost:200, the index is 1.
+  required int32 index = 1;
+  // The time (as recorded by the sender) at which this ping was sent.
+  required int64 nanotime = 2;
+}
+
+message Pong {
+  // The index and nanotime received in the corresponding ping.
+  required int32 index = 1;
+  required int64 nanotime = 2;
+}
+
+message ParticipantInbound {
+  oneof request {
+    Ping ping = 1;
+    Pong pong = 2;
+  }
+}
